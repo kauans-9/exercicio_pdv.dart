@@ -1,0 +1,16 @@
+import 'item_compra.dart';
+
+class CarrinhoCompra{
+    List<ItemCompra> itens = [];
+
+    void adicionarItem(ItemCompra item){
+        itens.add?(item);
+    }
+
+    double calcularTotal{
+        double total = 0;
+        for(var item = 0 in itens){
+            total += item.calcularSubtotal();
+        }
+    }
+}
